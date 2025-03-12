@@ -2,17 +2,20 @@
 import Bell from "../icons/bell.astro";
 import Grid from "../icons/grid.astro";
 
+import { bell_text } from "../lib/app.data";
+
 const colorDark = "rgba(54, 54, 54, 0.56)";
 const colorDarkHover = "rgba(54, 54, 54, 0.20)";
 ---
 
 <header class="mt-8">
   <nav class="flex justify-between">
-    <div class="button_nav" id="bell">
-      <Bell class:list={["text-white", "w-4"]}/>
+    <div class="button_nav gap-2" id="bell">
+      <Bell class:list={["text-white", "w-4"]} />
+      <span id="subscribe" class="text-white"></span>
     </div>
     <div class="button_nav" id="share">
-      <Grid class:list={["text-white", "w-4"]}/>
+      <Grid class:list={["text-white", "w-4"]} />
     </div>
   </nav>
 </header>
@@ -21,18 +24,47 @@ const colorDarkHover = "rgba(54, 54, 54, 0.20)";
   .button_nav {
     cursor: pointer;
     background-color: var(--colorDark);
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
-    transition-duration: .5s;
+    border-radius: 2em;
+    transition-duration: 0.5s;
     &:hover {
-        background-color: var(--colorDarkHover);
+      background-color: var(--colorDarkHover);
     }
     &:active {
-        border: solid 1px var(--colorDark);
+      border: solid 1px var(--colorDark);
+    }
+    span.close {
+      display: none;
+      animation: close 0.1s;
+    }
+  }
+
+  @keyframes close {
+    from {
+      display: flex;
+    }
+    to {
+      display: none;
     }
   }
 </style>
+
+<script define:vars={{ bell_text }}>
+  const bell = document.getElementById("bell");
+  const subscribe = document.getElementById("subscribe");
+  window.onload = () => {
+    bell ? (bell.style.borderRadius = "2em") : null;
+    subscribe ? (subscribe.innerText = bell_text) : null;
+    bell ? (bell.style.padding = "0 1em") : null;
+  };
+  setTimeout(() => {
+    subscribe ? (subscribe.innerText = "") : null;
+    subscribe ? subscribe.classList.add("close") : null;
+    bell ? (bell.style.borderRadius = "100%") : null;
+    bell ? (bell.style.padding = "0 0") : null;
+  }, 5000);
+</script>
