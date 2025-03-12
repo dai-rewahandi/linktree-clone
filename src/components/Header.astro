@@ -1,6 +1,7 @@
 ---
 import Bell from "../icons/bell.astro";
 import Grid from "../icons/grid.astro";
+import Close from "../icons/close.astro";
 
 import { bell_text } from "../lib/app.data";
 
@@ -19,6 +20,15 @@ const colorDarkHover = "rgba(54, 54, 54, 0.20)";
     </div>
   </nav>
 </header>
+<div id="open_box" class="wscreen h-screen flex justify-center items-center">
+  <div id="box" class="absolute w-80 h-80 bg-white rounded-2xl ">
+    <div class="box_head flex justify-end">
+      <button id="close" class="text-black p-2 cursor-pointer">
+        <Close class:list={["w-8"]} />
+      </button>
+    </div>
+  </div>
+</div>
 
 <style define:vars={{ colorDark, colorDarkHover }} lang="scss">
   .button_nav {
@@ -41,6 +51,10 @@ const colorDarkHover = "rgba(54, 54, 54, 0.20)";
       display: none;
       animation: close 0.1s;
     }
+  }
+
+  #open_box {
+    display: none;
   }
 
   @keyframes close {
@@ -66,5 +80,15 @@ const colorDarkHover = "rgba(54, 54, 54, 0.20)";
     subscribe ? subscribe.classList.add("close") : null;
     bell ? (bell.style.borderRadius = "100%") : null;
     bell ? (bell.style.padding = "0 0") : null;
-  }, 5000);
+  }, 3000);
+
+
+  const openBox = document.getElementById("open_box");
+  bell.addEventListener("click", () => {
+    openBox.style.display = "flex";
+  });
+  const close = document.getElementById("close");
+  close.addEventListener("click", () => {
+    openBox.style.display = "none";
+  });
 </script>

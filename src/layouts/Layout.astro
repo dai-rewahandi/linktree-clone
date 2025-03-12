@@ -15,8 +15,8 @@ const wallpaper = `url(${raw_wallpaper.src})`
     <meta name="generator" content={Astro.generator} />
     <title>Linktree Clone</title>
   </head>
-  <body class="w-screen min-h-screen flex justify-center backdrop-blur-3xl">
-    <main class="w-[40%]">
+  <body class="w-screen min-h-screen flex justify-center backdrop-blur-3xl overflow-hidden">
+    <main class="w-[80%] md:w-[40%]">
       <Header />
       <slot />
     </main>
