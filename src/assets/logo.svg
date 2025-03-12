@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:#78acff;fill-opacity:1"
+       id="rect1"
+       width="512"
+       height="512"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:134.137px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke-width:11.1781"
+       x="70.022469"
+       y="283.15753"
+       id="text1"><tspan
+         id="tspan1"
+         x="70.022469"
+         y="283.15753"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';fill:#e5e5e5;fill-opacity:1;stroke-width:11.1781">demo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:17.0716px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke-width:1.42264"
+       x="313.69873"
+       y="318.18692"
+       id="text2"><tspan
+         id="tspan2"
+         x="313.69873"
+         y="318.18692"
+         style="stroke-width:1.42264">dai -rewahandi</tspan></text>
+  </g>
+</svg>
